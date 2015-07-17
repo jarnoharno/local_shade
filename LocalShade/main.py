@@ -5,6 +5,7 @@ from collections import Counter
 from data_types import Event
 import numpy as np
 from sklearn import neighbors
+import sys
 
 
 class Main(object):
@@ -69,7 +70,15 @@ class Main(object):
             other_labels = [k for (k, v) in frequencies.items() if k not in train_labels]
         return {"training_labels": train_labels, "testing_labels": other_labels}
 
-bottom_left = {"latitude": 52.487592, "longitude": 13.316753}
-top_right = {"latitude": 52.557480, "longitude": 13.482072}
-main = Main(top_right, bottom_left)
-main.get_result()
+
+def run(bottom_left={"latitude": 52.487592, "longitude": 13.316753},
+        top_right={"latitude": 52.557480, "longitude": 13.482072}):
+    main = Main(top_right, bottom_left)
+    return main.get_result()
+
+if __name__ == "__main__":
+    args = sys.argv
+    if len(args) < 2:
+        run()
+    else:
+        run({"latitude": args[1], "longitude": args[2]}, {"latitude": args[3], "longitude": args[4]})
