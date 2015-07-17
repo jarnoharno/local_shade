@@ -15,7 +15,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/LocalShade$data_manager.coverage" NAME="data_manager Coverage Results" MODIFIED="1437134386044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LocalShade$main.coverage" NAME="main Coverage Results" MODIFIED="1437135267731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LocalShade$main.coverage" NAME="main Coverage Results" MODIFIED="1437144332983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -32,8 +32,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25587466" vertical-offset="164" max-vertical-offset="930">
-              <caret line="24" column="102" selection-start-line="24" selection-start-column="102" selection-end-line="24" selection-end-column="102" />
+            <state vertical-scroll-proportion="0.6752368" vertical-offset="236" max-vertical-offset="1650">
+              <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
               <folding>
                 <element signature="e#23#59#0" expanded="true" />
               </folding>
@@ -44,8 +44,8 @@
       <file leaf-file-name="data_types.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_types.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -55,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/url_manager.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+              <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -64,25 +64,25 @@
       <file leaf-file-name="data_manager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1725">
-              <caret line="85" column="46" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="689" max-vertical-offset="1740">
+              <caret line="78" column="101" selection-start-line="78" selection-start-column="101" selection-end-line="78" selection-end-column="101" />
               <folding>
                 <element signature="e#23#45#0" expanded="true" />
-                <marker date="1437136468000" expanded="true" signature="963:990" placeholder="DROP TABLE I..." />
-                <marker date="1437136468000" expanded="true" signature="1019:1153" placeholder="CREATE TABLE..IF..." />
-                <marker date="1437136468000" expanded="true" signature="1217:1244" placeholder="DROP TABLE I..." />
-                <marker date="1437136468000" expanded="true" signature="1273:1351" placeholder="CREATE TABLE..IF..." />
-                <marker date="1437136468000" expanded="true" signature="1938:1972" placeholder="INSERT INTO ..." />
-                <marker date="1437136468000" expanded="true" signature="2425:2456" placeholder="DROP TABLE I..." />
-                <marker date="1437136468000" expanded="true" signature="2485:2557" placeholder="CREATE TABLE..IF..." />
-                <marker date="1437136468000" expanded="true" signature="2706:2741" placeholder="INSERT INTO ..." />
-                <marker date="1437136468000" expanded="true" signature="3007:3041" placeholder="INSERT INTO ..." />
-                <marker date="1437136468000" expanded="true" signature="3255:3395" placeholder="SELECT * FRO..Venues..." />
-                <marker date="1437136468000" expanded="true" signature="3582:3620" placeholder="SELECT * FRO..Events..." />
-                <marker date="1437136468000" expanded="true" signature="3744:3789" placeholder="SELECT * FRO..Categories..." />
-                <marker date="1437136468000" expanded="true" signature="4028:4063" placeholder="SELECT DISTI..Events..." />
-                <marker date="1437136468000" expanded="true" signature="4132:4167" placeholder="SELECT DISTI..Venues..." />
-                <marker date="1437136468000" expanded="true" signature="4540:4577" placeholder="INSERT INTO ..." />
+                <marker date="1437138464000" expanded="true" signature="963:990" placeholder="DROP TABLE I..." />
+                <marker date="1437138464000" expanded="true" signature="1019:1153" placeholder="CREATE TABLE..IF..." />
+                <marker date="1437138464000" expanded="true" signature="1217:1244" placeholder="DROP TABLE I..." />
+                <marker date="1437138464000" expanded="true" signature="1273:1351" placeholder="CREATE TABLE..IF..." />
+                <marker date="1437138464000" expanded="true" signature="1938:1972" placeholder="INSERT INTO ..." />
+                <marker date="1437138464000" expanded="true" signature="2425:2456" placeholder="DROP TABLE I..." />
+                <marker date="1437138464000" expanded="true" signature="2485:2557" placeholder="CREATE TABLE..IF..." />
+                <marker date="1437138464000" expanded="true" signature="2706:2741" placeholder="INSERT INTO ..." />
+                <marker date="1437138464000" expanded="true" signature="3007:3041" placeholder="INSERT INTO ..." />
+                <marker date="1437138464000" expanded="true" signature="3245:3385" placeholder="SELECT * FRO..Venues..." />
+                <marker date="1437138464000" expanded="true" signature="3688:3726" placeholder="SELECT * FRO..Events..." />
+                <marker date="1437138464000" expanded="true" signature="3850:3895" placeholder="SELECT * FRO..Categories..." />
+                <marker date="1437138464000" expanded="true" signature="4134:4169" placeholder="SELECT DISTI..Events..." />
+                <marker date="1437138464000" expanded="true" signature="4238:4273" placeholder="SELECT DISTI..Venues..." />
+                <marker date="1437138464000" expanded="true" signature="4646:4683" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -96,9 +96,9 @@
         <option value="$PROJECT_DIR$/url_builder" />
         <option value="$PROJECT_DIR$/url_builder.py" />
         <option value="$PROJECT_DIR$/url_manager.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/data_manager.py" />
         <option value="$PROJECT_DIR$/data_types.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -466,51 +466,51 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data_manager.py">
+    <entry file="file://$PROJECT_DIR$/url_manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1725">
-          <caret line="85" column="46" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
-          <folding>
-            <element signature="e#23#45#0" expanded="true" />
-            <marker date="1437136468000" expanded="true" signature="963:990" placeholder="DROP TABLE I..." />
-            <marker date="1437136468000" expanded="true" signature="1019:1153" placeholder="CREATE TABLE..IF..." />
-            <marker date="1437136468000" expanded="true" signature="1217:1244" placeholder="DROP TABLE I..." />
-            <marker date="1437136468000" expanded="true" signature="1273:1351" placeholder="CREATE TABLE..IF..." />
-            <marker date="1437136468000" expanded="true" signature="1938:1972" placeholder="INSERT INTO ..." />
-            <marker date="1437136468000" expanded="true" signature="2425:2456" placeholder="DROP TABLE I..." />
-            <marker date="1437136468000" expanded="true" signature="2485:2557" placeholder="CREATE TABLE..IF..." />
-            <marker date="1437136468000" expanded="true" signature="2706:2741" placeholder="INSERT INTO ..." />
-            <marker date="1437136468000" expanded="true" signature="3007:3041" placeholder="INSERT INTO ..." />
-            <marker date="1437136468000" expanded="true" signature="3255:3395" placeholder="SELECT * FRO..Venues..." />
-            <marker date="1437136468000" expanded="true" signature="3582:3620" placeholder="SELECT * FRO..Events..." />
-            <marker date="1437136468000" expanded="true" signature="3744:3789" placeholder="SELECT * FRO..Categories..." />
-            <marker date="1437136468000" expanded="true" signature="4028:4063" placeholder="SELECT DISTI..Events..." />
-            <marker date="1437136468000" expanded="true" signature="4132:4167" placeholder="SELECT DISTI..Venues..." />
-            <marker date="1437136468000" expanded="true" signature="4540:4577" placeholder="INSERT INTO ..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="766">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/url_manager.py">
+    <entry file="file://$PROJECT_DIR$/data_manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="689" max-vertical-offset="1740">
+          <caret line="78" column="101" selection-start-line="78" selection-start-column="101" selection-end-line="78" selection-end-column="101" />
+          <folding>
+            <element signature="e#23#45#0" expanded="true" />
+            <marker date="1437138464000" expanded="true" signature="963:990" placeholder="DROP TABLE I..." />
+            <marker date="1437138464000" expanded="true" signature="1019:1153" placeholder="CREATE TABLE..IF..." />
+            <marker date="1437138464000" expanded="true" signature="1217:1244" placeholder="DROP TABLE I..." />
+            <marker date="1437138464000" expanded="true" signature="1273:1351" placeholder="CREATE TABLE..IF..." />
+            <marker date="1437138464000" expanded="true" signature="1938:1972" placeholder="INSERT INTO ..." />
+            <marker date="1437138464000" expanded="true" signature="2425:2456" placeholder="DROP TABLE I..." />
+            <marker date="1437138464000" expanded="true" signature="2485:2557" placeholder="CREATE TABLE..IF..." />
+            <marker date="1437138464000" expanded="true" signature="2706:2741" placeholder="INSERT INTO ..." />
+            <marker date="1437138464000" expanded="true" signature="3007:3041" placeholder="INSERT INTO ..." />
+            <marker date="1437138464000" expanded="true" signature="3245:3385" placeholder="SELECT * FRO..Venues..." />
+            <marker date="1437138464000" expanded="true" signature="3688:3726" placeholder="SELECT * FRO..Events..." />
+            <marker date="1437138464000" expanded="true" signature="3850:3895" placeholder="SELECT * FRO..Categories..." />
+            <marker date="1437138464000" expanded="true" signature="4134:4169" placeholder="SELECT DISTI..Events..." />
+            <marker date="1437138464000" expanded="true" signature="4238:4273" placeholder="SELECT DISTI..Venues..." />
+            <marker date="1437138464000" expanded="true" signature="4646:4683" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data_types.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25587466" vertical-offset="164" max-vertical-offset="930">
-          <caret line="24" column="102" selection-start-line="24" selection-start-column="102" selection-end-line="24" selection-end-column="102" />
+        <state vertical-scroll-proportion="0.6752368" vertical-offset="236" max-vertical-offset="1650">
+          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
           <folding>
             <element signature="e#23#59#0" expanded="true" />
           </folding>

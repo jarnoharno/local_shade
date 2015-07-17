@@ -73,9 +73,10 @@ class DataManager(object):
             self.cur.execute("INSERT INTO Events VALUES(?, ?, ?)", (elements[0][1:-1], elements[1],
                                                                     elements[2]))
 
-    def get_events_for_view(self, bottom_x, bottom_y, top_x, top_y):
+    def get_events_for_view(self, top_right, bottom_left):
         self.cur.execute("SELECT * FROM Venues WHERE VenueLatitude < ? AND VenueLongitude < ? AND VenueLatitude > ? "
-                         "AND VenueLongitude > ?", (top_x, top_y, bottom_x, bottom_y))
+                         "AND VenueLongitude > ?", (top_right["latitude"], top_right["longitude"],
+                                                    bottom_left["latitude"], bottom_left["longitude"]))
         venues_in_sight = self.cur.fetchall()
         events_instance = Event()
         for venue in venues_in_sight:

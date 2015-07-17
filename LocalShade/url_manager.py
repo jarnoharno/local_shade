@@ -1,4 +1,4 @@
-__author__ = 'faghihib'
+__author__ = 'Farbod'
 
 class UrlManager(object):
 
