@@ -7,6 +7,8 @@ import numpy as np
 from sklearn import neighbors
 import sys
 import json
+from json import encoder
+encoder.FLOAT_REPR = lambda o: format(o, '.4f')
 
 
 class Main(object):
@@ -84,7 +86,7 @@ if __name__ == "__main__":
     else:
         result = run({"latitude": args[1], "longitude": args[2]}, {"latitude": args[3], "longitude": args[4]})
     print "parseData(",
-    print json.dumps(result[0], sort_keys=True, indent=2),
+    print json.dumps(result[0], sort_keys=True, indent=2, ),
     print ",",
     print json.dumps(result[1], sort_keys=True, indent=2),
     print ");"
