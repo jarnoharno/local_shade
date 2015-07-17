@@ -1,5 +1,6 @@
 __author__ = 'Farbod'
 
+
 class UrlManager(object):
 
     EVENT_SEARCH = "https://www.eventbriteapi.com/v3/events/search/"

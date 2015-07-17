@@ -73,7 +73,7 @@ class DataManager(object):
                                                                     elements[2]))
 
     def get_events_for_view(self, top_right, bottom_left):
-        self.cur.execute("SELECT * FROM Venues WHERE VenueLatitude < ? AND VenueLongitude < ? AND VenueLatitude > ? "
+        self.cur.execute("SELECT DISTINCT * FROM Venues WHERE VenueLatitude < ? AND VenueLongitude < ? AND VenueLatitude > ? "
                          "AND VenueLongitude > ?", (top_right["latitude"], top_right["longitude"],
                                                     bottom_left["latitude"], bottom_left["longitude"]))
         venues_in_sight = self.cur.fetchall()
@@ -81,10 +81,11 @@ class DataManager(object):
         for venue in venues_in_sight:
             self.cur.execute("SELECT * FROM Events WHERE VenueId = ?", (venue[0],))
             events = self.cur.fetchall()
-            for event in events:
-                self.cur.execute("SELECT * FROM Categories WHERE CategoryId = ?", (event[1],))
-                category = self.cur.fetchall()
-                events_instance.add_event(event, venue, category)
+            events = events[0]
+            #for event in events:
+            self.cur.execute("SELECT * FROM Categories WHERE CategoryId = ?", (events[1],))
+            category = self.cur.fetchall()
+            events_instance.add_event(events, venue, category)
         return events_instance
 
 

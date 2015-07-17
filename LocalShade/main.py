@@ -2,6 +2,7 @@ __author__ = "Farbod"
 
 from data_manager import DataManager
 from collections import Counter
+from data_types import Event
 import numpy as np
 from sklearn import neighbors
 
@@ -13,8 +14,11 @@ class Main(object):
         self.data_manager = DataManager()
         self.top_right = top_right
         self.bottom_left = bottom_left
-        self.run()
+        self.result = self.run()
         self.data_manager.close_con()
+
+    def get_result(self):
+        return self.result
 
     def run(self):
         self.event_instance = self.data_manager.get_events_for_view(self.top_right, self.bottom_left)
@@ -27,19 +31,27 @@ class Main(object):
         testing_target = knn.predict(testing_array)
         data_points = np.concatenate((training_data_array, testing_array))
         targets = np.concatenate((training_target_array, testing_target))
-        targets_map = dict()
+        targets_map = list()
         target_index = 0
         for target in np.unique(targets):
-            targets_map[target] = target_index
+            targets_map.append((target, target_index, Event.get_category_color(target)))
             target_index += 1
-        df = file("datapoints.csv", "w")
+        result = []
+        result.append([[t, c] for (t, i, c) in targets_map])
+        dp = list()
+        #df = file("datapoints.csv", "w")
+
         for i in range(len(data_points)):
-            df.write(str(data_points[i][0])+","+str(data_points[i][1])+","+str(targets_map[targets[i]])+"\n")
-        df.close()
-        tf = file("targets.csv", "w")
-        for i in range(len(targets)):
-            tf.write(str(targets_map[targets[i]])+","+targets[i]+"\n")
-        tf.close()
+        #    df.write(str(data_points[i][0])+","+str(data_points[i][1])+","+str(targets_map[targets[i]][0])+"\n")
+            index = [index for (t, index, c) in targets_map if t == targets[i]]
+            dp.append([data_points[i][0], data_points[i][1], index[0]])
+        result.append(dp)
+        return result
+        #df.close()
+        #tf = file("targets.csv", "w")
+        #for i in range(len(targets)):
+        #    tf.write(str(targets_map[targets[i]])+","+targets[i]+"\n")
+        #tf.close()
 
     def divide_events_into_train_test(self):
         frequencies = Counter(self.event_instance.get_categories())
@@ -59,4 +71,5 @@ class Main(object):
 
 bottom_left = {"latitude": 52.487592, "longitude": 13.316753}
 top_right = {"latitude": 52.557480, "longitude": 13.482072}
-Main(top_right, bottom_left)
+main = Main(top_right, bottom_left)
+main.get_result()
