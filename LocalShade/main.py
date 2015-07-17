@@ -62,12 +62,12 @@ class Main(object):
             frequencies[key] /= float(total)
 
         values = sorted(frequencies.values(), reverse=True)
-        if len(values) > 3:
-            values = values[0:4]
-            train_labels = [k for (k, v) in frequencies.items() if frequencies[k] in values and frequencies[k] > .1]
+        if len(values) > 4:
+            values = values[0:5]
+            train_labels = [k for (k, v) in frequencies.items() if frequencies[k] in values and frequencies[k] > .05]
             other_labels = [k for (k, v) in frequencies.items() if k not in train_labels]
         else:
-            train_labels = [k for (k, v) in frequencies.items() if frequencies[k] > .1]
+            train_labels = [k for (k, v) in frequencies.items() if frequencies[k] > .05]
             other_labels = [k for (k, v) in frequencies.items() if k not in train_labels]
         return {"training_labels": train_labels, "testing_labels": other_labels}
 
