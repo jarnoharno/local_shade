@@ -6,6 +6,7 @@ from data_types import Event
 import numpy as np
 from sklearn import neighbors
 import sys
+import json
 
 
 class Main(object):
@@ -79,6 +80,8 @@ def run(bottom_left={"latitude": 52.487592, "longitude": 13.316753},
 if __name__ == "__main__":
     args = sys.argv
     if len(args) < 2:
-        run()
+        print "parseData(",
+        print json.dumps(run(), sort_keys=True, indent=2),
+        print ");"
     else:
         run({"latitude": args[1], "longitude": args[2]}, {"latitude": args[3], "longitude": args[4]})
