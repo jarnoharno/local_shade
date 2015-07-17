@@ -9,17 +9,16 @@ from url_manager import UrlManager
 
 class DataManager(object):
 
-    def __init__(self, token):
-        self.token = token
+    def __init__(self):
         self.con = None
         self.cur = None
         self.create_database_connector()
 
-    def extract_info(self, endpoint, parameters=dict()):
+    def extract_info(self, endpoint, token, parameters=dict()):
         response = requests.get(
-            UrlManager(self.token).create_url(endpoint, parameters),
+            UrlManager(token).create_url(endpoint, parameters),
             headers={
-            "Authorization": "Bearer " + self.token,
+            "Authorization": "Bearer " + token,
             },
             verify=True,  # Verify SSL certificate
         )
@@ -43,9 +42,9 @@ class DataManager(object):
         self.cur.execute("DROP TABLE IF EXISTS Events")
         self.cur.execute("CREATE TABLE IF NOT EXISTS Events(EventName Text, CategoryId Int, VenueId Int)")
 
-    def get_and_insert_events_into_database(self, parameters={}):
+    def get_and_insert_events_into_database(self, token, parameters={}):
         parameters["page"] = "1"
-        response = self.extract_info(UrlManager.EVENT_SEARCH, parameters)
+        response = self.extract_info(UrlManager.EVENT_SEARCH, token, parameters)
         for i in range(2, response["pagination"]["page_count"]):
             print "page number: %d total: %d" % (response["pagination"]["page_number"], response["pagination"]["page_count"])
             for event in response["events"]:
@@ -56,12 +55,12 @@ class DataManager(object):
                                                                         int(event["venue_id"])))
             self.con.commit()
             parameters["page"] = str(i)
-            response = self.extract_info(UrlManager.EVENT_SEARCH, parameters)
+            response = self.extract_info(UrlManager.EVENT_SEARCH, token, parameters)
 
-    def get_and_insert_categories_into_database(self):
+    def get_and_insert_categories_into_database(self, token):
         self.cur.execute("DROP TABLE IF EXISTS Categories")
         self.cur.execute("CREATE TABLE IF NOT EXISTS Categories(CategoryId Int, CategoryName Text)")
-        categories = self.extract_info(UrlManager.CATEGORIES, {})
+        categories = self.extract_info(UrlManager.CATEGORIES, token, {})
         for category in categories["categories"]:
             self.cur.execute("INSERT INTO Categories VALUES(?, ?)", (int(category["id"]), category["name"]))
         self.con.commit()
@@ -89,7 +88,7 @@ class DataManager(object):
         return events_instance
 
 
-    def get_and_insert_venues_into_database(self):
+    def get_and_insert_venues_into_database(self, token):
         self.cur.execute("SELECT DISTINCT VenueId FROM Events")
         venue_ids = self.cur.fetchall()
         self.cur.execute("SELECT DISTINCT VenueId FROM Venues")
@@ -100,7 +99,7 @@ class DataManager(object):
         for id in venue_ids:
             if id[0] in venue_ids_extracted:
                 continue
-            response = self.extract_info(UrlManager.VENUE + str(id[0]) + "/")
+            response = self.extract_info(UrlManager.VENUE + str(id[0]) + "/", token)
             self.cur.execute("INSERT INTO Venues VALUES(?, ?, ?, ?)", (int(response["id"]), response["name"],
                                                                        response["latitude"], response["longitude"]))
             self.con.commit()
