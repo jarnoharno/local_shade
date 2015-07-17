@@ -80,8 +80,11 @@ def run(bottom_left={"latitude": 52.487592, "longitude": 13.316753},
 if __name__ == "__main__":
     args = sys.argv
     if len(args) < 2:
-        print "parseData(",
-        print json.dumps(run(), sort_keys=True, indent=2),
-        print ");"
+        result = run()
     else:
-        run({"latitude": args[1], "longitude": args[2]}, {"latitude": args[3], "longitude": args[4]})
+        result = run({"latitude": args[1], "longitude": args[2]}, {"latitude": args[3], "longitude": args[4]})
+    print "parseData(",
+    print json.dumps(result[0], sort_keys=True, indent=2),
+    print ",",
+    print json.dumps(result[1], sort_keys=True, indent=2),
+    print ");"
