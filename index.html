@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Operator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-path">/agents</div>
+            <div class="profile-section">
+                <div class="profile-label">You are a <span class="dropdown-toggle">...</span></div>
+                <div class="profile-icon"><i class="fas fa-user-circle"></i></div>
+            </div>
+        </header>
+        
+        <main class="app-content">
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be added here dynamically -->
+                </div>
+                
+                <div class="chat-input-container">
+                    <textarea id="chatInput" placeholder="Send a message..." rows="1"></textarea>
+                    <button id="sendButton"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+            
+            <div class="planning-container">
+                <div class="planning-header">
+                    <h2>Planning & Execution</h2>
+                    <div class="planning-tabs">
+                        <button class="tab-button active" data-tab="planned">Planned</button>
+                        <button class="tab-button" data-tab="executing">Executing</button>
+                        <button class="tab-button" data-tab="completed">Completed</button>
+                    </div>
+                </div>
+                
+                <div class="planning-content">
+                    <div class="tab-content active" id="plannedTab">
+                        <div class="action-list" id="plannedActions">
+                            <!-- Planned actions will be added here dynamically -->
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="executingTab">
+                        <div class="action-list" id="executingActions">
+                            <!-- Executing actions will be added here dynamically -->
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="completedTab">
+                        <div class="action-list" id="completedActions">
+                            <!-- Completed actions will be added here dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="app-footer">
+            <div class="footer-item">
+                <i class="fas fa-plug"></i>
+                <span>unified API</span>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-memory"></i>
+                <span>memory</span>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-brain"></i>
+                <span>llm</span>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-tools"></i>
+                <span>tools</span>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
