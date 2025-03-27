@@ -1,0 +1,247 @@
+:root {
+    --bg-color: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-color: #ffffff;
+    --accent-color: #00FF66;
+    --accent-color-transparent: rgba(0, 255, 102, 0.1);
+    --border-color: #333333;
+    --header-height: 60px;
+    --footer-height: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Header Styles */
+.app-header {
+    background-color: var(--bg-color);
+    height: var(--header-height);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    color: var(--accent-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.profile-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.settings-icon {
+    color: var(--accent-color);
+}
+
+.profile-avatar {
+    width: 30px;
+    height: 30px;
+}
+
+.avatar-svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Main Content Styles */
+.app-main {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    position: relative;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.message {
+    margin-bottom: 15px;
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    line-height: 1.4;
+}
+
+.user-message {
+    background-color: var(--accent-color-transparent);
+    color: var(--text-color);
+    align-self: flex-end;
+    margin-left: auto;
+    border: 1px solid var(--accent-color);
+}
+
+.bot-message {
+    background-color: var(--bg-secondary);
+    color: var(--text-color);
+    align-self: flex-start;
+    border: 1px solid var(--border-color);
+}
+
+.chat-input-container {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.chat-input {
+    flex: 1;
+    background-color: var(--bg-secondary);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px 15px;
+    resize: none;
+    height: 50px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.chat-input:focus {
+    border-color: var(--accent-color);
+}
+
+.send-button {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    width: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.send-button:hover {
+    background-color: #00cc52;
+}
+
+/* Footer Styles */
+.app-footer {
+    height: var(--footer-height);
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.footer-item i {
+    font-size: 18px;
+    color: var(--accent-color);
+}
+
+.footer-item span {
+    font-size: 12px;
+}
+
+.footer-item:hover {
+    color: var(--accent-color);
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-section span {
+        display: none;
+    }
+    
+    .footer-item span {
+        font-size: 10px;
+    }
+    
+    .chat-container {
+        padding: 10px;
+    }
+    
+    .message {
+        max-width: 90%;
+    }
+}
