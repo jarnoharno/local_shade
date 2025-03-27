@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Operator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">/agents</div>
+                <div class="settings-icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+            <div class="agent-profile">
+                <div class="profile-header">
+                    <div class="profile-title">You are a <span class="dropdown">...</span></div>
+                    <div class="profile-icon">
+                        <svg width="40" height="40" viewBox="0 0 100 100">
+                            <path d="M50 10 C30 10 10 30 10 50 C10 70 30 90 50 90 C70 90 90 70 90 50 C90 30 70 10 50 10" fill="none" stroke="#00FF66" stroke-width="2"/>
+                            <path d="M30 40 C30 30 40 20 50 20 C60 20 70 30 70 40" fill="none" stroke="#00FF66" stroke-width="2"/>
+                            <circle cx="30" cy="40" r="5" fill="#00FF66"/>
+                            <circle cx="70" cy="40" r="5" fill="#00FF66"/>
+                            <path d="M30 70 C40 80 60 80 70 70" fill="none" stroke="#00FF66" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="profile-body">
+                    <div class="profile-line"></div>
+                    <div class="profile-features">
+                        <div class="feature-item">
+                            <div class="feature-line"></div>
+                            <div class="feature-dot"></div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-line"></div>
+                            <div class="feature-dot"></div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-line"></div>
+                            <div class="feature-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be added here dynamically -->
+                </div>
+                <div class="chat-input-container">
+                    <textarea id="userInput" placeholder="Type your message..." rows="1"></textarea>
+                    <button id="sendButton">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="planning-view">
+                <div class="planning-tabs">
+                    <div class="tab active" data-tab="planned">Planned</div>
+                    <div class="tab" data-tab="executing">Executing</div>
+                    <div class="tab" data-tab="completed">Completed</div>
+                </div>
+                <div class="planning-content">
+                    <div class="tab-content active" id="planned-content">
+                        <div class="empty-state">
+                            <p>No planned actions yet</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="executing-content">
+                        <div class="empty-state">
+                            <p>No executing actions</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="completed-content">
+                        <div class="empty-state">
+                            <p>No completed actions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-item">
+            <i class="fas fa-link"></i>
+            <span>unified API</span>
+        </div>
+        <div class="footer-item">
+            <i class="fas fa-memory"></i>
+            <span>memory</span>
+        </div>
+        <div class="footer-item">
+            <i class="fas fa-brain"></i>
+            <span>llm</span>
+        </div>
+        <div class="footer-item">
+            <i class="fas fa-tools"></i>
+            <span>tools</span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/languages/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/languages/javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/languages/bash.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
