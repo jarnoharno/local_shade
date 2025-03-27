@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalShade - AI-Powered Event Discovery</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">/agents</div>
+            <div class="user-profile">
+                <div class="profile-info">
+                    <span>You are a...</span>
+                    <div class="profile-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="#00FF66"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <div class="detail-line"></div>
+                        <span>Event Explorer</span>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-line"></div>
+                        <span>Local Discoverer</span>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-line"></div>
+                        <span>Trend Analyzer</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <main class="app-content">
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="map-controls">
+                    <button class="control-btn zoom-in">+</button>
+                    <button class="control-btn zoom-out">-</button>
+                </div>
+                <div class="event-filters">
+                    <div class="filter-item" data-category="Music">
+                        <span class="color-dot" style="background-color: #02B1E1;"></span>
+                        <span>Music</span>
+                    </div>
+                    <div class="filter-item" data-category="Food & Drink">
+                        <span class="color-dot" style="background-color: #738847;"></span>
+                        <span>Food & Drink</span>
+                    </div>
+                    <div class="filter-item" data-category="Sports & Fitness">
+                        <span class="color-dot" style="background-color: #AC3634;"></span>
+                        <span>Sports & Fitness</span>
+                    </div>
+                    <div class="filter-item" data-category="Arts">
+                        <span class="color-dot" style="background-color: #D0BEFB;"></span>
+                        <span>Arts</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="event-list">
+                <h2>Nearby Events</h2>
+                <div class="event-items">
+                    <!-- Event items will be populated dynamically -->
+                </div>
+            </div>
+        </main>
+        
+        <footer class="app-footer">
+            <div class="footer-item">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#00FF66"/>
+                    <path d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" fill="#00FF66"/>
+                </svg>
+                <span>unified API</span>
+            </div>
+            <div class="footer-item">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 4H3C1.9 4 1 4.9 1 6V18C1 19.1 1.9 20 3 20H21C22.1 20 23 19.1 23 18V6C23 4.9 22.1 4 21 4ZM21 18H3V6H21V18Z" fill="#00FF66"/>
+                    <path d="M9 12H15V14H9V12Z" fill="#00FF66"/>
+                    <path d="M9 8H15V10H9V8Z" fill="#00FF66"/>
+                </svg>
+                <span>memory</span>
+            </div>
+            <div class="footer-item">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4 17.17V4H20V16Z" fill="#00FF66"/>
+                    <path d="M7 9H17V11H7V9Z" fill="#00FF66"/>
+                    <path d="M7 12H14V14H7V12Z" fill="#00FF66"/>
+                </svg>
+                <span>llm</span>
+            </div>
+            <div class="footer-item">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.7 19L13.6 9.9C14.5 7.6 14 4.9 12.1 3C10.1 1 7.1 0.6 4.7 1.7L9 6L6 9L1.6 4.7C0.4 7.1 0.9 10.1 2.9 12.1C4.8 14 7.5 14.5 9.8 13.6L18.9 22.7C19.3 23.1 19.9 23.1 20.3 22.7L22.6 20.4C23.1 20 23.1 19.3 22.7 19Z" fill="#00FF66"/>
+                </svg>
+                <span>tools</span>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
