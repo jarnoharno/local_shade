@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Operator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>/agents</h1>
+            </div>
+            <div class="agent-profile">
+                <div class="agent-type">
+                    <span>You are a </span>
+                    <div class="dropdown">
+                        <span class="dropdown-text">...</span>
+                        <div class="dropdown-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="dropdown-content">
+                            <div class="dropdown-item" data-value="developer">Developer</div>
+                            <div class="dropdown-item" data-value="data-scientist">Data Scientist</div>
+                            <div class="dropdown-item" data-value="researcher">Researcher</div>
+                            <div class="dropdown-item" data-value="assistant">Assistant</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="agent-avatar">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 10 C 60 30, 80 30, 90 50 C 80 70, 60 70, 50 90 C 40 70, 20 70, 10 50 C 20 30, 40 30, 50 10" fill="none" stroke="#00FF66" stroke-width="2"/>
+                        <path d="M30 50 L 45 65 L 70 35" fill="none" stroke="#00FF66" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="tabs">
+                <div class="tab active" data-tab="chat">Chat</div>
+                <div class="tab" data-tab="planning">Planning</div>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-pane active" id="chat">
+                    <div class="chat-container">
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="message system">
+                                <div class="message-content">
+                                    <p>Hello! I'm your Local Operator AI assistant. How can I help you today?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input-container">
+                            <textarea id="chat-input" placeholder="Type your message here..."></textarea>
+                            <button id="send-button">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="planning">
+                    <div class="planning-container">
+                        <div class="planning-section">
+                            <h3>Planned Actions</h3>
+                            <div class="planning-list" id="planned-actions">
+                                <!-- Planned actions will be added here -->
+                            </div>
+                        </div>
+                        <div class="planning-section">
+                            <h3>Executing</h3>
+                            <div class="planning-list" id="executing-actions">
+                                <!-- Executing actions will be added here -->
+                            </div>
+                        </div>
+                        <div class="planning-section">
+                            <h3>Completed</h3>
+                            <div class="planning-list" id="completed-actions">
+                                <!-- Completed actions will be added here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-item">
+            <i class="fas fa-link"></i>
+            <span>unified API</span>
+        </div>
+        <div class="footer-item">
+            <i class="fas fa-memory"></i>
+            <span>memory</span>
+        </div>
+        <div class="footer-item">
+            <i class="fas fa-brain"></i>
+            <span>llm</span>
+        </div>
+        <div class="footer-item">
+            <i class="fas fa-tools"></i>
+            <span>tools</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/languages/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/languages/javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/languages/bash.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
